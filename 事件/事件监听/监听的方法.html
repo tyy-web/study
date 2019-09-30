@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        <button id="btn1">按钮1</button>
+     <button id="btn2">按钮2</button>
+    
+    <script>
+     var btn2 = document.getElementById('btn2');
+     //     增加监听        监听事件，方法，冒泡
+    //  btn2.addEventListener('click',a,false);
+   
+    //  btn2.addEventListener('mousedown',a,false);
+     btn1.addEventListener('mousedown',a,false);
+     btn2.addEventListener('mouseup',b,false);
+     btn1.addEvent('onclick',c,false);
+     function a(){
+         alert('鼠标按下');
+     }
+     function b(){
+         alert('鼠标抬起1');
+     }
+   
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn2">按钮2</button>
+    <script>
+     var btn2 = document.getElementById('btn2');
+     btn2.onclick = function(){
+        alert('按钮1');
+     }
+     //解除绑定
+   btn2.onclick = null;
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+     #box{
+         width: 500px;
+         height: 500px;
+         background-color: red;
+         color: blue
+     }
+     #mydiv{
+        width: 100px;
+         height: 100px;
+         background-color:yellow; 
+         color: aliceblue;
+     }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="mydiv"></div>
+    </div>
+    <script>
+    var mydiv = document.getElementById('mydiv');
+    // mydiv.onclick=function (){
+    //     alert('点击事件');
+    // }
+    // mydiv.ondblclick= function(){
+    //     alert('双击事件');
+    // }
+    // mydiv.onmousedown= function(){
+    //     mydiv.innerHTML = '按下事件';
+    // }
+    // //抬起事件
+    // mydiv.onmouseup= function(){
+    //     mydiv.innerHTML = ' ';
+    // }
+    // //鼠标移动
+    // //只有鼠标移动就触发
+    //  document.onmousemove = function(){
+    //      console.log('移动了');
+    //  }
+    //  mydiv.onmousemove=function(){
+    //     console.log('div');
+    //  }
+    //鼠标移入
+    //会触发冒泡（从内逐级向外依次触发）
+    // mydiv.onmouseover=function(){
+    //     console.log('移入了');
+    //  }
+    //不会触发多次
+    //   mydiv.onmouseenter=function(){
+    //     console.log('移入了');
+    //  }
+    //不会触发多次
+    //    box.onmouseenter=function(){
+    //     console.log('移入了');
+    //  }
+    //会触发多次，取决于嵌套和鼠标位置
+    //  box.onmouseover=function(){
+    //     console.log('移入红');
+    //  }
+    //鼠标移出
+    // mydiv.onmouseout=function(){
+    //     console.log('移出了');
+    //  }
+    //  box.onmouseout=function(){
+    //     console.log('移出红');
+    //  }
+    mydiv.onmouseleave=function(){
+        console.log('移出了');
+     }
+     box.onmouseleave=function(){
+        console.log('移出红');
+     }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        <!-- .简单的注册页面
+        2要求用户名和密码必须写才可以提交
+        3.提交后弹出注册成功
+        4.如果有没有写的内容，进行提示
+        5.用户准备填写时，在右侧提示该用户名是否可以注册
+        一个已经有的用户名库可以用一个数组创建
+        已有用户名分别为 tom jack lili -->
+    用户名：<input type="text" placeholder="请输入用户名" id="yhm" onblur="yhmName()">
+    <span id="span"></span>
+    <br>
+    密码：<input type="password" id="mm"   onblur="mmName()">
+    <span  id="sp"></span>
+    <br>
+    <button id="btn">注册</button>
+    <script>
+        var yhm = document.getElementById("yhm"); 
+         var mm = document.getElementById("mm"); 
+          var tj = document.getElementById("tj"); 
+          var span = document.getElementById("span");
+          var btn = document.getElementById("btn");
+          var sp = document.getElementById("sp");
+var arr=['tom','jack','lili'];
+          function yhmName(){
+                  if(arr.indexOf(yhm.value)!=-1){
+                   span.innerText='该用户名已存在';
+                  } else if(yhm.value==''||yhm.value==' '){
+                   span.innerText='用户名未填写';
+                  }else{
+                  span.innerText='该用户名可以注册';
+                  }
+        }
+          function mmName(){
+               var car=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/;
+               var con=car.test(mm.value);
+               if(con){
+                   sp.innerText='密码格式正确';
+               }else if(mm.value==''){
+                   sp.innerText='密码未填写';
+               }else{
+                   sp.innerText='密码格式错误';
+               }
+        }
+          btn.onclick=function(){
+               if(span.innerText=='该用户名可以注册'&& sp.innerText=='密码格式正确'){
+                  alert('注册成功');
+               }else{
+                  alert('注册失败');
+               }
+        }  
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+      img{
+          width: 200px;
+          display: block;
+          position: absolute;
+      }
+    </style>
+</head>
+<body>
+    <img src="1.jpg" alt=""  id="img"> 
+      <!-- <script>
+          var  img = document.getElementById('img');
+        document.onkeydown = function(e){
+            // alert('1');
+            switch(e.keyCode){
+                 case 39: img.style.marginLeft = '60px';
+                 break;
+            }
+        }
+        </script>  -->
+          <script>
+        var img = document.getElementById('img');
+        var w =0,s=0,a=0,d=0;  
+        document.onkeydown = function(e){
+            // alert(e.keyCode);
+            //37左
+            //38上
+            //39右
+            //40下
+            switch(e.keyCode){
+                case 37: 
+                    img.style.marginLeft =a* -50 + 'px';
+                    d++;
+                    break;
+                case 38: 
+                    img.style.marginTop =w* -50 + 'px';
+                    d++;
+                    break;
+                case 39: 
+                    img.style.marginLeft =d* 50 + 'px';
+                    d++;
+                    break;
+                case 40:
+                    img.style.marginTop = s * 50 + 'px';
+                    s++;
+                    break;
+            }
+        }
+        document.onkeyup =function(e){
+            alert('抬起');
+        }
+    </script>
+</body>
+</html>

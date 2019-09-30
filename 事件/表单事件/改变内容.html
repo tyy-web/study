@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="in1">
+        <script>
+       var in1 = document.getElementById('in1');
+       //改变内容
+       in1.onchange = function(){
+           in1.style.backgroundColor = 'blue  '
+       }
+       //用户输入触发
+       in1.oninput = function(){
+           in1.style.backgroundColor = 'red  '
+       }
+        </script>
+</body>
+</html>
