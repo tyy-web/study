@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      #box > div{
+          width: 50px;
+          height: 50px;
+          border: 1px solid black;
+          position: absolute;
+          background-image: url('2.jpg');
+          opacity: 0;
+          transition: 0.5s;
+      }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+    var box = document.getElementById('box');
+    // 10*10表格  50px*50px
+      for( var i=0;i<9;i++){
+          for( var j=0;j<13;j++ ){
+            var div = document.createElement('div');
+          box.appendChild(div);     
+             //i=0 i=1
+         div.style.top = i*50+'px';
+         div.style.left = j*50+'px';
+         div.style.backgroundPositionY =  i*-50+'px';
+         div.style.backgroundPositionX =  j*-50+'px';
+         div.onmousemove=function(){
+            //  this.style.backgroundColor='red';
+            this.style.opacity = 1;
+         }
+          }
+        
+      }
+    </script>
+</body>
+</html>

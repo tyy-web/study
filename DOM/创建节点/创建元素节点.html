@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+      // 用一个变量承接在文档中‘创建；的一个元素
+      var div = document.createElement('div');
+      // 将已经创建的元素放在想放的位置
+      document.body.appendChild(div);
+    </script> -->
+      <h1 id="h1"></h1>
+      <p id="p"></p>
+      <ul id="ul"></ul>
+    <script>
+        var h1 = document.getElementById('h1');
+        var a = document.createElement('a');
+     h1.appendChild(a);
+
+     var p =document.getElementById('p');
+     var span = document.createElement('span');
+     p.appendChild(span);
+    
+      var ul = document.getElementById('ul');
+    //   var li1 = document.createElement('li');
+    //   var li2 = document.createElement('li');
+    //   ul.appendChild(li1);
+    //   ul.appendChild(li2);
+    for(var i=0;i<3;i++){
+        var li = document.createElement('li');
+        ul.appendChild(li);
+    }
+
+    </script>
+</body>
+</html>

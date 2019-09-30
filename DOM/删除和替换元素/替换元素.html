@@ -1,0 +1,16 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+ </head>
+ <body>
+     <div id="mydiv"></div>
+      <script>
+       var mydiv =document.getElementById('mydiv');
+       var myp = document.createElement('p');
+       //在父元素中替换子元素，第一个是新的元素，第二个是旧的
+       document.body.replaceChild(myp,mydiv);
+     </script>
+ </body>
+ </html>

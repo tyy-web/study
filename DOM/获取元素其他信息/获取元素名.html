@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="mydiv"></div>
+    <script>
+     var div = document.getElementById('mydiv');
+     console.log(div);
+    </script> -->
+
+
+    <h1 id="b">字体</h1>
+    <script>
+      var  b = document.getElementById('b');
+      console.log(b.tagName);
+        
+      //方法一：
+      //哪些标签是加粗的h1~h6，b，string
+      //H1||H2||H3||H4||H5||H6||B||STRING
+      if(b.tagName == 'H1' || b.tagName == 'H2' || b.tagName == 'H3'|| b.tagName == 'H4' || b.tagName == 'H5' || b.tagName == 'H6'){
+        b.style.fontWeight = 400;
+      }
+      //方法二：
+      //不管是不是粗体，同一变成细体
+     // b.style.fontWeight = 400;
+
+     //方法三：
+     var  arr = ['H1','H2','H3','H4','H5','H6','B','STRING'];
+     //console.log(arr.indexOd(DIV));
+     //检测数组里是否有粗体标签名，返回-1外都是粗体
+     var isTure = arr.indexOf(b.tagName);
+     console.log(isTure);
+     //判断如果是粗体，就改变样式
+     if(isTure !=-1){
+        b.style.fontWeight =200;
+        b.style.color = 'red ';
+     }
+    </script>
+</body>
+</html>

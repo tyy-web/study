@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <style>
+    .a{
+      height: 200px;
+      width: 200px;
+      
+    }
+    .b{
+        background-color: blue;
+    }
+    .c{
+      background-color: red;
+    }
+    </style> -->
+    <style>
+    .blue{
+      background-color: blue;
+    }
+    </style>
+</head>
+<body>
+    <!-- <h1 id="h">你好</h1>
+    <h2 id="w">我是</h2>
+    <span id="j">金喜庆</span>
+    <script>
+      h.style.fontWeight=200;
+      w.style.display= 'inline';
+      if(w.tagName == 'H2' ){
+       w.style.fontWeight = 400;
+      }
+    </script> -->
+    <!-- <ul id="ul"></ul>
+    <script>
+      ul.innerHTML = '<li>苹果</li><li>西瓜</li><li>草莓</li>';
+    </script> -->
+    <!-- <div id="fk" class="a c"></div>
+    <button id="dj">点击</button>
+    <script>
+    var div = document.getElementById('fk');
+    console.log(div.className);
+    dj.onclick=function(){div.className = 'b a';}
+    console.log(div.className);
+    </script> -->
+
+     <script>
+      document.body.innerHTML = '<ul><li>123</li><li>456</li><li>789</li></ul>';
+      var li = document.getElementsByTagName('li');
+        console.log(li[1].style.backgroundColor = 'blue');
+        //  document.getElementsByTagName('li')[1].setAttribute('class','blue');
+     </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                width: 400px;
+                border: 1px solid gray;
+                margin: 0 auto;
+               
+            }
+            .text {
+                width: 400px;
+                min-height: 600px;
+            }
+            .say {
+                width: 400px;
+                height: 100px;
+                background-color: rgb(211, 214, 213);
+                overflow: hidden;
+            }
+            .say p {
+                float: left;
+                height: 100px;
+                width: 300px;
+                background-color: cadetblue;
+                line-height: 100px;
+            }
+            .say > button {
+                float: right;
+                height: 50px;
+                width: 100px;
+                margin-top: 25px;
+                
+            }
+            li {
+                list-style: none;
+                
+            }
+            
+            li:nth-child(odd){
+                text-align: right;
+            }
+            li:nth-child(odd):after {
+                content: ':♥(ˆ◡ˆԅ)';
+                font-size: 20px;
+                color: red;
+            }
+            li:nth-child(even){
+                text-align: left;
+            }
+            li:nth-child(even):before {
+                content: '太阳:';
+                font-size: 20px;
+                color: blue;
+            }
+            </style>
+</head>
+<body>
+        <div id="box" class="box">
+                <ul class="text" id="area"></ul>
+                <div class="say">
+                    <p id="enter" contenteditable="true"></p>
+                    <button id="btn">发送</button>
+                </div>
+            </div>
+            <script>
+                    var btn = document.getElementById('btn');
+                    var enter = document.getElementById('enter');
+                    var area = document.getElementById('area');
+                    btn.onclick=function(){
+                        //输入内容字符串
+                          var nr = enter.innerText;
+                          var  li = document.createElement('li');
+                          //创建一个文本节点内容是用户输入的
+                          var text =document.createTextNode(nr);
+                          li.appendChild(text);
+                          area.appendChild(li);
+                          enter.innerText = '';
+                    }
+                    </script>
+</body>
+</html>

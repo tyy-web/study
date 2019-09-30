@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 一行三列 -->
+    <table id="table">
+    </table>
+    <script>
+     var table = document.getElementById('table');
+    //  var tr = document.createElement('tr');
+    //  table.appendChild(tr);
+     for(var i=0;i<2;i++){
+        var tr = document.createElement('tr');
+        table.appendChild(tr);
+        for(var r=0;r<3;r++){
+        var td = document.createElement('td');
+        tr.appendChild(td);
+    }
+ }
+    //  for(var i=0;i<3;i++){
+    //     var td = document.createElement('td');
+    //     table.appendChild(td);
+    // }
+    </script>
+
+    <script>
+    var btn = document.getElementById('btn');
+    var enter = document.getElementById('enter');
+    var area = document.getElementById('area');
+    btn.onclick=function(){
+        //输入内容字符串
+          var nr = enter.innerText;
+          var  li = document.createElement('li');
+          //创建一个文本节点内容是用户输入的
+          var text =document.createTextNode(nr);
+          li.appendChild(nr);
+          area.appendChild(li);
+          enter.innerText = '';
+    }
+    </script>
+</body>
+</html>

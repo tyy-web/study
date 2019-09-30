@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ul id="ul">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+    <script>
+     var lis = document.getElementsByTagName('li');
+     //伪数组
+     console.log(lis);
+      
+
+      var ul = document.getElementById('ul');
+      var list = ul.getElementsByTagName('li');
+      console.log(list);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    div{
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        max-width: 5px;
+        
+        background-color: red;
+        margin: 100px auto;
+    }
+    </style>
+</head>
+<body>
+    <div id="mydiv">div</div>
+        <script>
+         var  mydiv = document.getElementById('mydiv');
+         console.log(mydiv.style);//这种方式只能拿到内联样式
+        //  console.log(mydiv.offsetWidth);
+        console.log(mydiv.clientWidth)
+         </script>
+</body>
+</html>
