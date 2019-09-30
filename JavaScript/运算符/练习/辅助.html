@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="d">
+    <script>
+   
+    var d = document.getElementById('d');
+     var nw = confirm('女王请点确定');
+     console.log(nw);
+     d.oninput=function(){
+    // d.value=="2019-3-8"? alert('可以打5折'):alert('您是不可以打折的');
+     d.value=='2019-03-08'&& nw ? alert('5折'):alert('不打折');
+     }
+    </script>
+</body>
+</html>

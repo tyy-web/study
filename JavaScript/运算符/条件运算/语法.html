@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    div{
+        width: 100px;
+        height: 100px;
+    }
+    .red{
+        background-color: red;
+    }
+    .blue{
+        background-color: blue;
+    }
+    </style>
+</head>
+<body>
+    <div class="red" id="div"></div>
+    <script>
+        var a = 10;
+        var b = 20;
+        //你说的话对吗？ true ： false
+        //a < b ? alert('yes') : alert('no')
+
+       div.onclick = function(){
+           console.log(div.className);
+           div.className=='red'?div.className='blue':div.className='red';
+       }
+    </script>
+</body>
+</html>

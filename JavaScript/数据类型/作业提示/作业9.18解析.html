@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="in1">
+    +
+    <input type="text" id="in2">
+    =
+    <button id="btn">计算</button>
+    <span id="jg"></span>
+    <script>
+        //获取所有元素
+    var in1 = document.getElementById('in1');
+    var in2 = document.getElementById('in2');
+    var btn = document.getElementById('btn');
+    var jg = document.getElementById('jg');
+    //点击计算按钮
+    btn.onclick=function(){
+        //拿到用户输入的内容
+        var in1v=parseInt(in1.value);
+        var in2v=parseInt(in2.value);
+     if(isNaN(in1v)){
+         alert('请输入数字');
+     }else if(isNaN(in2v)){
+        alert('请输入数字');
+     }else{
+        jg.innerHTML=parseInt(in1.value)+parseInt(in2.value);
+     }
+         //jg.innerHTML=parseInt(in1.value)+parseInt(in2.value);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="d">
+  <script>
+    var d = document.getElementById('d');
+     var nw = confirm('女王请点确定');
+     console.log(nw);
+     if(nw == true){
+     d.oninput = function(){
+         if(d.value=="2019-03-08"){
+            alert('五折');
+         }else{
+            alert('不打折');
+         }
+     }
+     }else{
+         alert('不是女王直接退出');
+     }
+
+  </script>
+</body>
+</html>

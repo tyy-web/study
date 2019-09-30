@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <style></style>
+</head>
+<body>
+        <div id="show"></div>
+        <input type="text" id="in1">
+        <input type="text" id="in2">
+        <button id="btn">计算</button>
+    <script>
+        var in1 = document.getElementById('in1');
+        var in2 = document.getElementById('in2');
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+           var n=parseInt(Number(in1.value))+parseInt(Number(in2.value));
+          show.innerText=n;
+          if(in1.value %1 == 0 && in2.value %1 == 0){
+	
+          	
+          }else{
+             alert('请输入数字')
+         }
+        }
+
+  </script>
+</body>
+</html>

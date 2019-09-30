@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="" placeholder="请输入年龄" id="nl">
+    <button id="btn">点击</button>
+    <script>
+      btn.onclick=function(){
+          if(isNaN(nl.value<=6)){
+              alert('免费吃');
+          }else if(isNaN(nl.value<=6,nl.value>=80)){
+            alert('五折吃饭');
+          }
+      }
+    </script>
+</body>
+</html>

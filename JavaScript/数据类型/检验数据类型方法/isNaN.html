@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="int1">
+        <button id="btn">计算</button>
+        <script>
+            var int1 = document.getElementById('int1');
+            var btn = document.getElementById('btn');
+            btn.onclick = function(){
+                
+                var num = Number(int1.value);
+                console.log(isNaN(num));
+                //isNaN()将你要判断的内容放在括号里
+                //如果返回的是true说明括号里的内容不是数字不能计算
+             if(isNaN(num)){
+                    alert('你干嘛呢》不是计算吗？输入文字干嘛');
+              }
+                 alert(num+10);
+            }
+        </script>
+</body>
+</html>
